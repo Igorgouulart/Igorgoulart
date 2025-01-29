@@ -37,4 +37,5 @@
 ---
 
 ### 🌐 Onde me encontrar:
-- [LinkedIn](www.linkedin.com/in/igor-nogueira-goulart-779962293)   
+- [LinkedIn](www.linkedin.com/in/igor-nogueira-goulart-779962293)
+- - [Portfólio](file:///C:/Users/aline/OneDrive/Área%20de%20Trabalho/Portfólio/index.html) 
