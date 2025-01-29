@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicação de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Aplicação de Notas</h1>
+    <textarea id="nota" placeholder="Digite sua nota..."></textarea>
+    <button onclick="salvarNota()">Salvar Nota</button>
+    <h2>Notas Salvas:</h2>
+    <ul id="listaNotas"></ul>
+    <script>
+        function salvarNota() {
+            let nota = document.getElementById("nota").value;
+            if (nota) {
+                let notas = JSON.parse(localStorage.getItem("notas")) || [];
+                notas.push(nota);
+                localStorage.setItem("notas", JSON.stringify(notas));
+                document.getElementById("nota").value = "";
+                carregarNotas();
+            }
+        }
+        function carregarNotas() {
+            let notas = JSON.parse(localStorage.getItem("notas")) || [];
+            let lista = document.getElementById("listaNotas");
+            lista.innerHTML = "";
+            notas.forEach((nota, index) => {
+                let li = document.createElement("li");
+                li.textContent = nota;
+                let btn = document.createElement("button");
+                btn.textContent = "Excluir";
+                btn.onclick = () => excluirNota(index);
+                li.appendChild(btn);
+                lista.appendChild(li);
+            });
+        }
+        function excluirNota(index) {
+            let notas = JSON.parse(localStorage.getItem("notas"));
+            notas.splice(index, 1);
+            localStorage.setItem("notas", JSON.stringify(notas));
+            carregarNotas();
+        }
+        window.onload = carregarNotas;
+    </script>
+</body>
+</html>
