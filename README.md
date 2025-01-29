@@ -38,4 +38,4 @@
 
 ### 🌐 Onde me encontrar:
 - [LinkedIn](www.linkedin.com/in/igor-nogueira-goulart-779962293)
-- - [Portfólio]([https://seusite.com](https://igorgouulart.github.io/portfolio/) 
+- - [Portfólio](https://igorgouulart.github.io/portfolio/) 
